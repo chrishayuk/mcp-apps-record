@@ -1,0 +1,35 @@
+{
+  "_comment": "Claude Desktop config snippets for each recording session",
+
+  "shot3_simple_server": {
+    "mcpServers": {
+      "language-stats": {
+        "url": "https://mcp-apps-record.fly.dev/simple/mcp"
+      }
+    }
+  },
+
+  "shot4_manual_server": {
+    "mcpServers": {
+      "language-stats": {
+        "url": "https://mcp-apps-record.fly.dev/manual/mcp"
+      }
+    }
+  },
+
+  "shot5_decorator_server": {
+    "mcpServers": {
+      "language-stats": {
+        "url": "https://mcp-apps-record.fly.dev/decorator/mcp"
+      }
+    }
+  },
+
+  "shot6_to_9_demo_server": {
+    "mcpServers": {
+      "demo": {
+        "url": "https://mcp-view-demo.fly.dev/mcp"
+      }
+    }
+  }
+}
