@@ -1,13 +1,11 @@
-import os
-
-from mcp.server.fastmcp import FastMCP
-from chuk_view_schemas.fastmcp import chart_tool
+from chuk_mcp_server import ChukMCPServer
+from chuk_view_schemas.chuk_mcp import chart_tool
 from chuk_view_schemas.chart import ChartContent, ChartDataset
 
-mcp = FastMCP(
-    "language-stats",
-    host="0.0.0.0",
-    port=int(os.getenv("PORT", "8000")),
+mcp = ChukMCPServer(
+    name="language-stats",
+    version="1.0.0",
+    description="Decorator-based MCP Apps demo",
 )
 
 
@@ -34,4 +32,4 @@ async def show_popularity(chart_type: str = "bar") -> ChartContent:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    mcp.run()

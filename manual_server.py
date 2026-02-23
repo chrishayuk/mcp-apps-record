@@ -1,15 +1,3 @@
-"""
-Shot 4: The "Manual Way" — raw MCP Apps plumbing without helper decorators.
-
-Shows:
-  - Registering a ui:// resource that serves HTML from CDN
-  - Returning CallToolResult with content + structuredContent
-  - The _meta.ui.resourceUri metadata on the tool
-
-Run locally:  uv run manual_server.py
-Deploy:       fly deploy -c fly-manual.toml
-"""
-
 import os
 
 import httpx

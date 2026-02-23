@@ -1,15 +1,13 @@
-import os
+from chuk_mcp_server import ChukMCPServer
 
-from mcp.server.fastmcp import FastMCP
-
-mcp = FastMCP(
-    "language-stats",
-    host="0.0.0.0",
-    port=int(os.getenv("PORT", "8000")),
+mcp = ChukMCPServer(
+    name="language-stats",
+    version="1.0.0",
+    description="Plain text language popularity stats",
 )
 
 
-@mcp.tool()
+@mcp.tool
 async def get_language_popularity() -> str:
     """Get programming language popularity from latest survey data."""
     data = {
@@ -24,4 +22,4 @@ async def get_language_popularity() -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    mcp.run()

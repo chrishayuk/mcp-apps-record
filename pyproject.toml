@@ -2,11 +2,12 @@
 name = "mcp-apps-record"
 version = "0.1.0"
 description = "Sample MCP servers for the MCP Apps video"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "mcp>=1.0",
     "httpx>=0.27",
     "chuk-view-schemas[fastmcp]>=0.1.0",
+    "chuk-mcp-server>=0.1.0",
 ]
 
 [build-system]
@@ -19,3 +20,4 @@ py-modules = []
 # chuk-view-schemas is not yet on PyPI — resolve from local monorepo
 [tool.uv.sources]
 chuk-view-schemas = { path = "../chuk-ai/chuk-mcp-ui/chuk-view-schemas", editable = true }
+chuk-mcp-server = { path = "../chuk-ai/mcp-servers/chuk-mcp-server", editable = true }
